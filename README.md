@@ -2,4 +2,4 @@
 
 ## View
 
-<a href="https://my-portfolio-rho-indol.vercel.app/" target="blank_">View my portifolio</a>
+<a href="https://my-portfolio-rho-indol.vercel.app/" target="_blank">View my portifolio</a>

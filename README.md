@@ -1,5 +1,5 @@
 # Welcome to My Portfolio!
 
-##View
+## View
 
 View my portfolio

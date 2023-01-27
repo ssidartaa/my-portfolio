@@ -9,8 +9,9 @@ import {
 
 import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
-import { FaGithub, FaShare } from "react-icons/fa";
+import { FaGithub, FaShare, FaRocket } from "react-icons/fa";
 import { userData } from "@/utils/userData";
+import { deployData } from "@/utils/deployData";
 
 interface ReposType {
   id: number;
@@ -80,6 +81,15 @@ export const Project = (): JSX.Element => {
               <ProjectLink target="_blank" href={repository.html_url}>
                 <FaGithub /> Github Code
               </ProjectLink>
+              {deployData.map((project) => {
+                return (
+                  project.name === repository.name && (
+                    <ProjectLink target="_blank" href={project.deployLink}>
+                      <FaRocket /> Deploy
+                    </ProjectLink>
+                  )
+                );
+              })}
               {repository.homepage && (
                 <ProjectLink
                   target="_blank"

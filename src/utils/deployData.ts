@@ -1,8 +1,4 @@
 export const deployData = [
-  {
-    name: "CNAB-parser-api",
-    deployLink: "https://cnab-parser-api.onrender.com/docs/swagger-ui/",
-  },
   { name: "CNAB-parser", deployLink: "https://cnab-parser.vercel.app/" },
   {
     name: "my-portfolio",

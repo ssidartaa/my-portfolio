@@ -11,6 +11,7 @@ import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaRocket } from "react-icons/fa";
 import { userData } from "@/utils/userData";
+import { notFoundData } from "@/utils/projectsData";
 
 interface ReposType {
   id: number;
@@ -32,10 +33,13 @@ export const Project = (): JSX.Element => {
 
       const json = await data.json();
 
-      setRepositories(json);
-      console.log(json);
+      const filtredJson = json.filter(
+        (repository: any) => !notFoundData.includes(repository.name)
+      );
 
-      return json;
+      setRepositories(filtredJson);
+
+      return filtredJson;
     };
 
     fetchData();
